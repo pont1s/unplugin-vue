@@ -69,6 +69,9 @@ importers:
       prettier:
         specifier: ^3.8.3
         version: 3.8.3
+      rolldown:
+        specifier: ^1.0.0
+        version: 1.0.0
       rollup:
         specifier: ^4.60.3
         version: 4.60.3
@@ -7119,8 +7122,8 @@ snapshots:
 
   '@typescript-eslint/project-service@8.59.2(typescript@6.0.3)':
     dependencies:
-      '@typescript-eslint/tsconfig-utils': 8.59.2(typescript@6.0.3)
-      '@typescript-eslint/types': 8.59.2
+      '@typescript-eslint/tsconfig-utils': 8.59.3(typescript@6.0.3)
+      '@typescript-eslint/types': 8.59.3
       debug: 4.4.3
       typescript: 6.0.3
     transitivePeerDependencies:

@@ -1,0 +1,356 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`rolldown > tests/fixtures/basic.vue > isProduction = false 1`] = `
+"// basic.js
+import { createElementBlock, createElementVNode, openBlock } from "vue";
+//#region \\0/plugin-vue/export-helper
+var export_helper_default = (sfc, props) => {
+	const target = sfc.__vccOpts || sfc;
+	for (const [key, val] of props) target[key] = val;
+	return target;
+};
+//#endregion
+//#region tests/fixtures/basic.vue
+console.log("Hello world");
+const _sfc_main = {};
+function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
+	return openBlock(), createElementBlock("div", null, [..._cache[0] || (_cache[0] = [createElementVNode("h1", null, "Hello World", -1)])]);
+}
+var basic_default = /* @__PURE__ */ export_helper_default(_sfc_main, [["render", _sfc_render], ["__file", "#FILE#"]]);
+//#endregion
+export { basic_default as default };
+"
+`;
+
+exports[`rolldown > tests/fixtures/basic.vue > isProduction = true 1`] = `
+"// basic.js
+import { createElementBlock, createElementVNode, openBlock } from "vue";
+//#region \\0/plugin-vue/export-helper
+var export_helper_default = (sfc, props) => {
+	const target = sfc.__vccOpts || sfc;
+	for (const [key, val] of props) target[key] = val;
+	return target;
+};
+//#endregion
+//#region tests/fixtures/basic.vue
+console.log("Hello world");
+const _sfc_main = {};
+function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
+	return openBlock(), createElementBlock("div", null, [..._cache[0] || (_cache[0] = [createElementVNode("h1", null, "Hello World", -1)])]);
+}
+var basic_default = /* @__PURE__ */ export_helper_default(_sfc_main, [["render", _sfc_render]]);
+//#endregion
+export { basic_default as default };
+"
+`;
+
+exports[`rolldown > tests/fixtures/reactivity-transform.ts > isProduction = false 1`] = `
+"// reactivity-transform.js
+import { ref } from "vue";
+//#region tests/fixtures/reactivity-transform.ts
+const ref1 = $ref("hello");
+const ref2 = $(ref("hello"));
+console.log(ref1);
+console.log(ref2);
+console.log($$(ref1));
+console.log($$(ref2));
+//#endregion
+"
+`;
+
+exports[`rolldown > tests/fixtures/reactivity-transform.ts > isProduction = true 1`] = `
+"// reactivity-transform.js
+import { ref } from "vue";
+//#region tests/fixtures/reactivity-transform.ts
+const ref1 = $ref("hello");
+const ref2 = $(ref("hello"));
+console.log(ref1);
+console.log(ref2);
+console.log($$(ref1));
+console.log($$(ref2));
+//#endregion
+"
+`;
+
+exports[`rolldown > tests/fixtures/reactivity-transform.vue > isProduction = false 1`] = `
+"// reactivity-transform.js
+import { ref } from "vue";
+//#region \\0/plugin-vue/export-helper
+var export_helper_default = (sfc, props) => {
+	const target = sfc.__vccOpts || sfc;
+	for (const [key, val] of props) target[key] = val;
+	return target;
+};
+var reactivity_transform_default = /* @__PURE__ */ export_helper_default({
+	__name: "reactivity-transform",
+	setup(__props, { expose: __expose }) {
+		__expose();
+		const ref1 = $ref("hello");
+		const ref2 = $(ref("hello"));
+		console.log(ref1);
+		console.log(ref2);
+		console.log($$(ref1));
+		console.log($$(ref2));
+		const __returned__ = {
+			ref1,
+			ref2,
+			ref
+		};
+		Object.defineProperty(__returned__, "__isScriptSetup", {
+			enumerable: false,
+			value: true
+		});
+		return __returned__;
+	}
+}, [["__file", "#FILE#"]]);
+//#endregion
+export { reactivity_transform_default as default };
+"
+`;
+
+exports[`rolldown > tests/fixtures/reactivity-transform.vue > isProduction = true 1`] = `
+"// reactivity-transform.js
+import { ref } from "vue";
+//#region tests/fixtures/reactivity-transform.vue
+const _sfc_main = {
+	__name: "reactivity-transform",
+	setup(__props) {
+		const ref1 = $ref("hello");
+		const ref2 = $(ref("hello"));
+		console.log(ref1);
+		console.log(ref2);
+		console.log($$(ref1));
+		console.log($$(ref2));
+		return () => {};
+	}
+};
+//#endregion
+export { _sfc_main as default };
+"
+`;
+
+exports[`rolldown > tests/fixtures/script-setup.vue > isProduction = false 1`] = `
+"// script-setup.js
+import { createElementBlock, createElementVNode, openBlock } from "vue";
+//#region \\0/plugin-vue/export-helper
+var export_helper_default = (sfc, props) => {
+	const target = sfc.__vccOpts || sfc;
+	for (const [key, val] of props) target[key] = val;
+	return target;
+};
+//#endregion
+//#region tests/fixtures/script-setup.vue
+const foo = "bar";
+const _sfc_main = {
+	__name: "script-setup",
+	setup(__props, { expose: __expose }) {
+		__expose();
+		const __returned__ = { foo };
+		Object.defineProperty(__returned__, "__isScriptSetup", {
+			enumerable: false,
+			value: true
+		});
+		return __returned__;
+	}
+};
+function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
+	return openBlock(), createElementBlock("div", null, [..._cache[0] || (_cache[0] = [createElementVNode("h1", null, "Hello World", -1)])]);
+}
+var script_setup_default = /* @__PURE__ */ export_helper_default(_sfc_main, [["render", _sfc_render], ["__file", "#FILE#"]]);
+//#endregion
+export { script_setup_default as default };
+"
+`;
+
+exports[`rolldown > tests/fixtures/script-setup.vue > isProduction = true 1`] = `
+"// script-setup.js
+import { createElementBlock, createElementVNode, openBlock } from "vue";
+const _sfc_main = {
+	__name: "script-setup",
+	setup(__props) {
+		return (_ctx, _cache) => {
+			return openBlock(), createElementBlock("div", null, [..._cache[0] || (_cache[0] = [createElementVNode("h1", null, "Hello World", -1)])]);
+		};
+	}
+};
+//#endregion
+export { _sfc_main as default };
+"
+`;
+
+exports[`rolldown > tests/fixtures/script-setup-ts.vue > isProduction = false 1`] = `
+"// script-setup-ts.js
+import { createElementBlock, createElementVNode, defineComponent, openBlock } from "vue";
+//#region \\0/plugin-vue/export-helper
+var export_helper_default = (sfc, props) => {
+	const target = sfc.__vccOpts || sfc;
+	for (const [key, val] of props) target[key] = val;
+	return target;
+};
+//#endregion
+//#region tests/fixtures/script-setup-ts.vue
+const str = "bar";
+const _sfc_main = /* @__PURE__ */ defineComponent({
+	__name: "script-setup-ts",
+	props: {
+		foo: {
+			type: String,
+			required: true,
+			default: "123"
+		},
+		bar: {
+			type: Number,
+			required: true,
+			default: 123
+		},
+		baz: {
+			type: Boolean,
+			required: true,
+			default: true
+		}
+	},
+	setup(__props, { expose: __expose }) {
+		__expose({ str });
+		const __returned__ = { str };
+		Object.defineProperty(__returned__, "__isScriptSetup", {
+			enumerable: false,
+			value: true
+		});
+		return __returned__;
+	}
+});
+function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
+	return openBlock(), createElementBlock("div", null, [..._cache[0] || (_cache[0] = [createElementVNode("h1", null, "Hello World", -1)])]);
+}
+var script_setup_ts_default = /* @__PURE__ */ export_helper_default(_sfc_main, [["render", _sfc_render], ["__file", "#FILE#"]]);
+//#endregion
+export { script_setup_ts_default as default };
+"
+`;
+
+exports[`rolldown > tests/fixtures/script-setup-ts.vue > isProduction = true 1`] = `
+"// script-setup-ts.js
+import { createElementBlock, createElementVNode, defineComponent, openBlock } from "vue";
+//#region tests/fixtures/script-setup-ts.vue
+const str = "bar";
+const _sfc_main = /* @__PURE__ */ defineComponent({
+	__name: "script-setup-ts",
+	props: {
+		foo: { default: "123" },
+		bar: { default: 123 },
+		baz: {
+			type: Boolean,
+			default: true
+		}
+	},
+	setup(__props, { expose: __expose }) {
+		__expose({ str });
+		return (_ctx, _cache) => {
+			return openBlock(), createElementBlock("div", null, [..._cache[0] || (_cache[0] = [createElementVNode("h1", null, "Hello World", -1)])]);
+		};
+	}
+});
+//#endregion
+export { _sfc_main as default };
+"
+`;
+
+exports[`rolldown > tests/fixtures/sfc-src.vue > isProduction = false 1`] = `
+"// sfc-src.js
+import { createElementBlock, createElementVNode, defineComponent, openBlock, toDisplayString } from "vue";
+//#region ./tests/fixtures/src-script.ts?vue&type=script&src=true&lang.ts
+var src_script_ts_vue_type_script_src_true_lang_default = defineComponent({ setup() {
+	return [];
+} });
+//#endregion
+//#region ./tests/fixtures/src-template.html?vue&type=template&src=true&lang.js
+function render(_ctx, _cache, $props, $setup, $data, $options) {
+	return openBlock(), createElementBlock("div", null, [_cache[0] || (_cache[0] = createElementVNode("h1", null, "Hello World", -1)), createElementVNode("h2", null, toDisplayString(_ctx.msg), 1)]);
+}
+//#endregion
+//#region \\0/plugin-vue/export-helper
+var export_helper_default = (sfc, props) => {
+	const target = sfc.__vccOpts || sfc;
+	for (const [key, val] of props) target[key] = val;
+	return target;
+};
+//#endregion
+//#region tests/fixtures/sfc-src.vue
+var sfc_src_default = /* @__PURE__ */ export_helper_default(src_script_ts_vue_type_script_src_true_lang_default, [["render", render], ["__file", "#FILE#"]]);
+//#endregion
+export { sfc_src_default as default };
+"
+`;
+
+exports[`rolldown > tests/fixtures/sfc-src.vue > isProduction = true 1`] = `
+"// sfc-src.js
+import { createElementBlock, createElementVNode, defineComponent, openBlock, toDisplayString } from "vue";
+//#region ./tests/fixtures/src-script.ts?vue&type=script&src=true&lang.ts
+var src_script_ts_vue_type_script_src_true_lang_default = defineComponent({ setup() {
+	return [];
+} });
+//#endregion
+//#region ./tests/fixtures/src-template.html?vue&type=template&src=true&lang.js
+function render(_ctx, _cache, $props, $setup, $data, $options) {
+	return openBlock(), createElementBlock("div", null, [_cache[0] || (_cache[0] = createElementVNode("h1", null, "Hello World", -1)), createElementVNode("h2", null, toDisplayString(_ctx.msg), 1)]);
+}
+//#endregion
+//#region \\0/plugin-vue/export-helper
+var export_helper_default = (sfc, props) => {
+	const target = sfc.__vccOpts || sfc;
+	for (const [key, val] of props) target[key] = val;
+	return target;
+};
+//#endregion
+//#region tests/fixtures/sfc-src.vue
+var sfc_src_default = /* @__PURE__ */ export_helper_default(src_script_ts_vue_type_script_src_true_lang_default, [["render", render]]);
+//#endregion
+export { sfc_src_default as default };
+"
+`;
+
+exports[`rolldown > tests/fixtures/src-script.ts > isProduction = false 1`] = `
+"// src-script.js
+import { defineComponent } from "vue";
+//#region tests/fixtures/src-script.ts
+var src_script_default = defineComponent({ setup() {
+	return [];
+} });
+//#endregion
+export { src_script_default as default };
+"
+`;
+
+exports[`rolldown > tests/fixtures/src-script.ts > isProduction = true 1`] = `
+"// src-script.js
+import { defineComponent } from "vue";
+//#region tests/fixtures/src-script.ts
+var src_script_default = defineComponent({ setup() {
+	return [];
+} });
+//#endregion
+export { src_script_default as default };
+"
+`;
+
+exports[`rolldown > tests/fixtures/typescript.vue > isProduction = false 1`] = `
+"// typescript.js
+//#region \\0/plugin-vue/export-helper
+var export_helper_default = (sfc, props) => {
+	const target = sfc.__vccOpts || sfc;
+	for (const [key, val] of props) target[key] = val;
+	return target;
+};
+var typescript_default = /* @__PURE__ */ export_helper_default({}, [["__file", "#FILE#"]]);
+//#endregion
+export { typescript_default as default };
+"
+`;
+
+exports[`rolldown > tests/fixtures/typescript.vue > isProduction = true 1`] = `
+"// typescript.js
+const _sfc_main = {};
+//#endregion
+export { _sfc_main as default };
+"
+`;
